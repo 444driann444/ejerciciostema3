@@ -21,7 +21,7 @@ public class EJERCICIO9PDF {
 		
 		do {
 			int numeroran = (int) (Math.random()*100) ;
-			System.out.println("El numero aleatorio es " + numeroran);
+			
 			
 			System.out.println("Turno " + contadorturn);
 			contadorturn++;
@@ -33,7 +33,7 @@ public class EJERCICIO9PDF {
 			System.out.println(j2.getNombre1() + " Introduce un numero");
 			int numerojugador2 = teclado.nextInt();
 			
-		//	System.out.println("El numero aleatorio es " + numeroran);
+			System.out.println("El numero aleatorio es " + numeroran);
 			
 			int distanciajugador1;
 			int distanciajugador2;
