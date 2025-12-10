@@ -27,7 +27,7 @@ public class Jugadores {
 	}
 	
 	public void reducirVida () {
-		vida = vida - 10;
+		vida = vida - 50;
 	}
 	public void imprimirVidaRestante() {
 		System.out.println("Vida " + nombre1 + " = " + vida);

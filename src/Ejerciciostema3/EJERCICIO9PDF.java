@@ -17,15 +17,11 @@ public class EJERCICIO9PDF {
 		j2 = new Jugadores(nombrejugador2);
 		int contadorturn = 1;
 		
+		System.out.println("COMIENZA EL JUEGO");
 		
 		do {
 			int numeroran = (int) (Math.random()*100) ;
-			
-			
-			
-
-			
-			System.out.println("COMIENZA EL JUEGO");
+			System.out.println("El numero aleatorio es " + numeroran);
 			
 			System.out.println("Turno " + contadorturn);
 			contadorturn++;
@@ -37,7 +33,7 @@ public class EJERCICIO9PDF {
 			System.out.println(j2.getNombre1() + " Introduce un numero");
 			int numerojugador2 = teclado.nextInt();
 			
-			System.out.println("El numero aleatorio es " + numeroran);
+		//	System.out.println("El numero aleatorio es " + numeroran);
 			
 			int distanciajugador1;
 			int distanciajugador2;
@@ -51,16 +47,18 @@ public class EJERCICIO9PDF {
 			}else if (distanciajugador2 < distanciajugador1) {
 				j1.reducirVida();
 				System.out.println(nombrejugador1  + " pierde 10 puntos de vida ");
+			}else if (distanciajugador1 == distanciajugador2) {
+				System.out.println("Son iguales no se quita vida");
 			}else {
-				System.out.println("Son iguales no se quitan vida");
+				System.out.println("error");
 			}
-				System.out.println();
+				
 				j1.imprimirVidaRestante();
 				j2.imprimirVidaRestante();
-			
-			
-			
-		}while(j1.haPerdido()|| j2.haPerdido());
+				System.out.println();
+				
+				
+		}while(!j1.haPerdido() && !j2.haPerdido());
 		teclado.close();
 		
 		if (j1.haPerdido()  == true) {
