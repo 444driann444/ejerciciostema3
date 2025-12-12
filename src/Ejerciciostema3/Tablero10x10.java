@@ -49,8 +49,20 @@ public class Tablero10x10 {
 			p.setY(nuevaPos);
 		}
 	}
-	public void distanciaEuclidea(int x2, int y2) {
+	public double distanciaEuclidea(int x2, int y2) {
 		
+		double calculodeX =  (int) ( (Math.pow(x2 - p.getX(),2)));
+		double calculodeY =  (int) Math.pow(y2 - p.getY(), 2) ;
+		double raizdeXyY = Math.sqrt(calculodeX + calculodeY);
+		return raizdeXyY;
+		
+	}
+	public double distanciaEuclidea(Punto punto) {
+		
+		double calculodeX =  (int) ( (Math.pow(punto.getX() - p.getX(),2)));
+		double calculodeY =  (int) Math.pow(punto.getY() - p.getY(), 2) ;
+		double raizdeXyY = Math.sqrt(calculodeX + calculodeY);
+		return raizdeXyY;
 		
 	}
 	public void mostrarPosicion() {

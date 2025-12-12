@@ -8,6 +8,15 @@ public class Punto {
 		x = 5;
 		y = 5;
 	}
+	
+	
+
+	public Punto(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+
+
 
 	public int getX() {
 		return x;
@@ -25,6 +34,13 @@ public class Punto {
 		this.y = y;
 	}
 
+
+
+	@Override
+	public String toString() {
+		return "Punto [x=" + x + ", y=" + y + "]";
+	}
+	
 
 	
 	

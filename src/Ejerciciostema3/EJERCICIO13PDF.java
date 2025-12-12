@@ -1,6 +1,6 @@
 package Ejerciciostema3;
 
-public class EJERCICIO12PDF {
+public class EJERCICIO13PDF {
 
 	public static void main(String[] args) {
 		
@@ -18,6 +18,16 @@ public class EJERCICIO12PDF {
 		System.out.println("Con el punto 8,8");
 		
 		System.out.println(tablero.distanciaEuclidea(8,8));
+		
+		System.out.println();
+		
+		Punto p2 = new Punto(8, 8);
+		
+		System.out.println("Distancia del euclidea del punto " );
+		tablero.mostrarPosicion();
+		System.out.println(p2);
+		
+		System.out.println(tablero.distanciaEuclidea(p2));
 		
 	}
 	
