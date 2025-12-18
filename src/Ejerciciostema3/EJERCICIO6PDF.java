@@ -6,7 +6,7 @@ public class EJERCICIO6PDF {
 		
 		Banco kevin = new Banco("kevin", "70830871W", "calle don carmelo, n8", 0);
 		System.out.println(kevin);
-		
+								
 		
 		kevin.ingresarDinero(500);		
 		kevin.mostrarCuenta();
