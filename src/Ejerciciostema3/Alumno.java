@@ -1,6 +1,7 @@
 package Ejerciciostema3;
 
 import java.sql.Date;
+import java.util.Scanner;
 
 public class Alumno {
 	
@@ -170,9 +171,118 @@ public class Alumno {
 		int letradeldni;
 		
 	}
+	public void pedirNotasAlumno (Scanner teclado) {
+		float nota;
+		
+		System.out.println("Cual es tu nota");
+		nota = teclado.nextFloat();
+	}
 
-
+	public float calcularMedia () {
+		
+		float sumatorio = (notaBase + notaEntorno + notaFol + notaIngles +  notaLenguaje + notaOptativa + notaProg + notaSif) / 8;
+		
+		return sumatorio;
+	}
 	
+	public boolean compararMedias  (Alumno al2) {
+		
+		if (this.calcularMedia() > al2.calcularMedia()) {
+			return true;
+		}
+		else {
+			return false;	
+		}
+		
+		
+	}
+	public void ImprimirNotamasalta () {
+		
+		float notamasalta = notaBase;
+		if (notamasalta < notaEntorno) {
+			notamasalta = notaEntorno;
+		}
+		if (notamasalta < notaFol) {
+			notamasalta = notaFol;
+		}
+		if (notamasalta < notaIngles) {
+			notamasalta = notaIngles;
+		}
+		if (notamasalta < notaLenguaje) {
+			notamasalta = notaLenguaje;
+		}
+		if ( notamasalta < notaOptativa) {
+			notamasalta = notaOptativa;
+		}
+		if (notamasalta < notaProg) {
+			notamasalta = notaProg;
+		}
+		if (notamasalta < notaSif) {
+			notamasalta = notaSif;
+		}
+		
+	}
+	public void ImprimirNotamasBaja () {
+		
+		float notamasbaja = notaBase;
+		if (notamasbaja > notaEntorno) {
+			notamasbaja = notaEntorno;
+		}
+		if (notamasbaja > notaFol) {
+			notamasbaja = notaFol;
+		}
+		if (notamasbaja > notaIngles) {
+			notamasbaja = notaIngles;
+		}
+		if (notamasbaja > notaLenguaje) {
+			notamasbaja = notaLenguaje;
+		}
+		if ( notamasbaja > notaOptativa) {
+			notamasbaja = notaOptativa;
+		}
+		if (notamasbaja > notaProg) {
+			notamasbaja = notaProg;
+		}
+		if (notamasbaja > notaSif) {
+			notamasbaja = notaSif;
+		}
+		
+	}
+	public boolean DecirsiPromociona () {
+		
+		float horas = 0;
+		
+		if (notaBase >= 5) {
+			horas = horas + 170;
+		}
+		if (notaEntorno >= 5) {
+			horas = horas + 68;
+		}
+		if (notaFol >= 5) {
+			horas = horas + 102;
+		}
+		if (notaIngles >= 5) {
+			horas = horas + 68;
+		}
+		if (notaLenguaje >= 5) {
+			horas = horas + 102;
+		}
+		if (notaOptativa >= 5) {
+			horas = horas + 34;
+		}
+		if (notaProg >= 5) {
+			horas = horas + 272;
+		}
+		if (notaSif >= 5) {
+			horas = horas + 170;
+		}
+		if (horas >= 600) {
+			return true;
+		}else {
+			return false;
+		}
+		
+	}
 
 	
 	
